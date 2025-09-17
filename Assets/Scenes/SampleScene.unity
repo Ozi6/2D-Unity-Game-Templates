@@ -821,6 +821,18 @@ MonoBehaviour:
   rotationMode: 0
   maxRotationAngle: 20
   returnRotationSpeed: 180
+  enableWallCling: 1
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 512
+  wallCheckDistance: 0.6
+  wallSlideSpeed: 2
+  wallJumpForce: 8
+  wallJumpHorizontalForce: 6
+  wallClingTime: 2
+  wallJumpInputBuffer: 0.2
+  enableEdgeSmoothing: 1
+  edgeSmoothDistance: 0.1
 --- !u!212 &1097306796
 SpriteRenderer:
   m_ObjectHideFlags: 0

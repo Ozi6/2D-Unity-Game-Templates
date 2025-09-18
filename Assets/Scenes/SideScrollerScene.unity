@@ -1285,7 +1285,7 @@ MonoBehaviour:
   cornerHealthDisplay: {fileID: 663634763}
   characterHealthDisplay: {fileID: 0}
   showCornerDisplay: 1
-  showCharacterDisplay: 1
+  showCharacterDisplay: 0
 --- !u!4 &1153498029
 Transform:
   m_ObjectHideFlags: 0

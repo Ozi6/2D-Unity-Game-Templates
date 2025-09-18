@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(MovementComponents))]
+[RequireComponent(typeof(MovementControllerCore))]
 public class MovementBehaviour : MonoBehaviour
 {
     [Header("Movement")]
@@ -12,7 +12,7 @@ public class MovementBehaviour : MonoBehaviour
     public float AirDecel = 10f;
     public float CrouchSpeedMultiplier = 0.6f;
 
-    private MovementComponents core;
+    private MovementControllerCore core;
     private WallClingBehaviour wallCling;
     private CrouchingBehaviour crouch;
 
@@ -21,7 +21,7 @@ public class MovementBehaviour : MonoBehaviour
 
     void Start()
     {
-        core = GetComponent<MovementComponents>();
+        core = GetComponent<MovementControllerCore>();
         wallCling = GetComponent<WallClingBehaviour>();
         crouch = GetComponent<CrouchingBehaviour>();
     }

@@ -1,19 +1,19 @@
 using UnityEngine;
 
-[RequireComponent(typeof(MovementComponents))]
+[RequireComponent(typeof(MovementControllerCore))]
 public class SlightRotationBehaviour : MonoBehaviour
 {
     [Header("Rotation")]
     public float MaxRotationAngle = 20f;
     public float ReturnRotationSpeed = 180f;
 
-    private MovementComponents core;
+    private MovementControllerCore core;
     private MovementBehaviour movement;
     private WallClingBehaviour wallCling;
 
     void Start()
     {
-        core = GetComponent<MovementComponents>();
+        core = GetComponent<MovementControllerCore>();
         movement = GetComponent<MovementBehaviour>();
         wallCling = GetComponent<WallClingBehaviour>();
         core.Rb.constraints = RigidbodyConstraints2D.None;

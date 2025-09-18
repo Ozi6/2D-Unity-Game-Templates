@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(MovementComponents))]
+[RequireComponent(typeof(MovementControllerCore))]
 public class JumpingBehaviour : MonoBehaviour
 {
     [Header("Jump")]
@@ -8,7 +8,7 @@ public class JumpingBehaviour : MonoBehaviour
     public float JumpHoldMultiplier = 0.5f;
     public float MaxJumpHoldTime = 0.2f;
 
-    private MovementComponents core;
+    private MovementControllerCore core;
     private WallClingBehaviour wallCling;
 
     private bool isJumping = false;
@@ -16,7 +16,7 @@ public class JumpingBehaviour : MonoBehaviour
 
     void Start()
     {
-        core = GetComponent<MovementComponents>();
+        core = GetComponent<MovementControllerCore>();
         wallCling = GetComponent<WallClingBehaviour>();
     }
 

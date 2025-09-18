@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(MovementComponents))]
+[RequireComponent(typeof(MovementControllerCore))]
 public class WallClingBehaviour : MonoBehaviour
 {
     [Header("Wall Cling System")]
@@ -13,7 +13,7 @@ public class WallClingBehaviour : MonoBehaviour
     public float WallClingTime = 2f;
     public float WallJumpInputBuffer = 0.2f;
 
-    private MovementComponents core;
+    private MovementControllerCore core;
     private MovementBehaviour movement;
 
     public bool IsWallClinging { get; private set; } = false;
@@ -25,7 +25,7 @@ public class WallClingBehaviour : MonoBehaviour
 
     void Start()
     {
-        core = GetComponent<MovementComponents>();
+        core = GetComponent<MovementControllerCore>();
         movement = GetComponent<MovementBehaviour>();
         if (WallMask.value == 0)
             WallMask = core.GroundMask;

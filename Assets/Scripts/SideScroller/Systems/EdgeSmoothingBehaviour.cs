@@ -1,19 +1,19 @@
 using UnityEngine;
 
-[RequireComponent(typeof(MovementComponents))]
+[RequireComponent(typeof(MovementControllerCore))]
 public class EdgeSmoothingBehaviour : MonoBehaviour
 {
     [Header("Edge Smoothing")]
     public bool EnableEdgeSmoothing = true;
     public float EdgeSmoothDistance = 0.1f;
 
-    private MovementComponents core;
+    private MovementControllerCore core;
     private MovementBehaviour movement;
     private WallClingBehaviour wallCling;
 
     void Start()
     {
-        core = GetComponent<MovementComponents>();
+        core = GetComponent<MovementControllerCore>();
         movement = GetComponent<MovementBehaviour>();
         wallCling = GetComponent<WallClingBehaviour>();
     }

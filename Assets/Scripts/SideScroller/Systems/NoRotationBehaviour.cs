@@ -1,13 +1,13 @@
 using UnityEngine;
 
-[RequireComponent(typeof(MovementComponents))]
+[RequireComponent(typeof(MovementControllerCore))]
 public class NoRotationBehaviour : MonoBehaviour
 {
-    private MovementComponents core;
+    private MovementControllerCore core;
 
     void Start()
     {
-        core = GetComponent<MovementComponents  >();
+        core = GetComponent<MovementControllerCore>();
         core.Rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }

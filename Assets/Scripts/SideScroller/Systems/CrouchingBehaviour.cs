@@ -1,18 +1,18 @@
 using UnityEngine;
 
-[RequireComponent(typeof(MovementComponents))]
+[RequireComponent(typeof(MovementControllerCore))]
 public class CrouchingBehaviour : MonoBehaviour
 {
     [Header("Crouch")]
     public bool EnableCrouch = true;
 
-    private MovementComponents core;
+    private MovementControllerCore core;
     public bool IsCrouching { get; private set; } = false;
     private Vector2 crouchSize;
 
     void Start()
     {
-        core = GetComponent<MovementComponents>();
+        core = GetComponent<MovementControllerCore>();
         crouchSize = new Vector2(core.StandingSize.x, core.StandingSize.y * 0.5f);
     }
 

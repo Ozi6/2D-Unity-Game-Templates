@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MovementComponents : Singleton<MovementComponents>
+public class MovementControllerCore : Singleton<MovementControllerCore>
 {
     [Header("Ground Check")]
     public LayerMask GroundMask;

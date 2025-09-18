@@ -12,13 +12,11 @@ public class Platform : Block
 
     private void Update()
     {
-        Vector2 playerBottom = MovementComponents.Instance.GetGroundCheckPoint();
+        Vector2 playerBottom = MovementControllerCore.Instance.GetGroundCheckPoint();
         float platformTop = gameObject.transform.position.y;
         bool playerAbovePlatform = playerBottom.y >= platformTop;
         bool playerPressingDown = Input.GetAxis("Vertical") < -0.1f;
         bool shouldCollide = playerAbovePlatform && !playerPressingDown;
-        if (shouldCollide)
-            Debug.Log("SHOULD COLLIDE");
         platformCollider.enabled = shouldCollide;
     }
 }

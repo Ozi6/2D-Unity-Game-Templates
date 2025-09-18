@@ -12,7 +12,7 @@ public class Platform : Block
 
     private void Update()
     {
-        Vector2 playerBottom = SideScrollController.Instance.GetGroundCheckPoint();
+        Vector2 playerBottom = MovementComponents.Instance.GetGroundCheckPoint();
         float platformTop = gameObject.transform.position.y;
         bool playerAbovePlatform = playerBottom.y >= platformTop;
         bool playerPressingDown = Input.GetAxis("Vertical") < -0.1f;

@@ -1,0 +1,1 @@
+public enum RotationMode { FullRotation, SlightRotation, NoRotation }

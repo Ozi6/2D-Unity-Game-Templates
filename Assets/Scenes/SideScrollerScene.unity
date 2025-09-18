@@ -693,8 +693,14 @@ GameObject:
   - component: {fileID: 1097306794}
   - component: {fileID: 1097306793}
   - component: {fileID: 1097306792}
-  - component: {fileID: 1097306795}
   - component: {fileID: 1097306796}
+  - component: {fileID: 1097306798}
+  - component: {fileID: 1097306797}
+  - component: {fileID: 1097306799}
+  - component: {fileID: 1097306800}
+  - component: {fileID: 1097306801}
+  - component: {fileID: 1097306802}
+  - component: {fileID: 1097306803}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -787,52 +793,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2082093771}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1097306795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097306791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9511596523a24bf4cbcacce2e2e955da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 7
-  groundAccel: 20
-  groundDecel: 24
-  turnaroundDecel: 80
-  airAccel: 30
-  airDecel: 20
-  crouchSpeedMultiplier: 0.6
-  jumpForce: 4
-  jumpHoldMultiplier: 0.5
-  maxJumpHoldTime: 0.2
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 1536
-  groundCheckBuffer: 0.1
-  enableCrouch: 1
-  rotationMode: 0
-  maxRotationAngle: 20
-  returnRotationSpeed: 180
-  enableWallCling: 1
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 512
-  wallCheckDistance: 0.6
-  wallSlideSpeed: 2
-  wallJumpForce: 8
-  wallJumpHorizontalForce: 6
-  wallClingTime: 2
-  wallJumpInputBuffer: 0.2
-  enableEdgeSmoothing: 1
-  edgeSmoothDistance: 0.1
 --- !u!212 &1097306796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -888,6 +851,119 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1097306797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097306791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878d44e0cccde584996e22b3e0105432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpForce: 5
+  JumpHoldMultiplier: 0.5
+  MaxJumpHoldTime: 0.2
+--- !u!114 &1097306798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097306791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ce14f0b67c53343aa454a4386bed44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GroundMask:
+    serializedVersion: 2
+    m_Bits: 1536
+  GroundCheckBuffer: 0.1
+--- !u!114 &1097306799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097306791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3971b2f52c0fe6542bf74af90031c042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxSpeed: 7
+  GroundAccel: 25
+  GroundDecel: 30
+  TurnaroundDecel: 35
+  AirAccel: 15
+  AirDecel: 10
+  CrouchSpeedMultiplier: 0.6
+--- !u!114 &1097306800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097306791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c04c3d7d9af6943a890a1885e75b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnableCrouch: 1
+--- !u!114 &1097306801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097306791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddcb80226b1c2e4986b599ab1e3cad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnableWallCling: 1
+  WallMask:
+    serializedVersion: 2
+    m_Bits: 512
+  WallCheckDistance: 0.6
+  WallSlideSpeed: 2
+  WallJumpForce: 8
+  WallJumpHorizontalForce: 6
+  WallClingTime: 2
+  WallJumpInputBuffer: 0.2
+--- !u!114 &1097306802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097306791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2af287ceef529340b00a4a55e886bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxRotationAngle: 20
+  ReturnRotationSpeed: 180
+--- !u!114 &1097306803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097306791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd707097d6cfe84ba59c4ce4f206a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnableEdgeSmoothing: 1
+  EdgeSmoothDistance: 0.1
 --- !u!1001 &1235162481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1173,37 +1249,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc9a1814364a9b343b0fc84ffcb49b9a, type: 3}
---- !u!1 &2082093770
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2082093771}
-  m_Layer: 8
-  m_Name: GroundCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2082093771
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082093770}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.493, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1097306794}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2083860585
 PrefabInstance:
   m_ObjectHideFlags: 0
